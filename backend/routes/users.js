@@ -4,9 +4,10 @@ const router = express.Router()
 // Get All
 router.get('/', async (req, res) => {
     try {
-      const user = db.collection('users')
-      const users = await user.findOne();
-      res.json(users);
+    //   const user = db.collection('users')
+    //   const users = await user.findOne();
+    //   res.json(users);
+        res.send("Hello World")
     } catch (error) {
       res.status(500).json({ error: 'Internal server error' });
     }
@@ -14,7 +15,7 @@ router.get('/', async (req, res) => {
 
 // Get One
 router.get('/:id', (req,res) => {
-    
+    res.send(req.params.id)
 })
 
 // Create One

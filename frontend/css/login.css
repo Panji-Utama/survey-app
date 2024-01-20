@@ -1,0 +1,60 @@
+:root {
+    --primary: #17253A;
+    --secondary: #6CEFFE;
+
+}
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(https://www.eesurvey.net/wp-content/uploads/2019/03/dreamstime_m_84931842.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo {
+    width: 200px;
+    margin-top: 30px;
+    border-radius: 40px;
+}
+
+.login-container {
+    backdrop-filter: blur(5px);
+    border: solid 1px rgb(78, 251, 249, 0.2);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2);
+    padding: 40px;
+}
+
+.login-title {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    color: white;
+}
+
+input[type="email"], input[type="password"]{
+    appearance: none;
+    padding: 5px;
+    margin: 10px 0;
+    border: solid 1px green;
+    outline: none;
+    background-color: transparent;
+    color: red;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
