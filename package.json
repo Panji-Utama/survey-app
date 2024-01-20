@@ -1,0 +1,32 @@
+{
+  "name": "survey-app",
+  "version": "1.0.0",
+  "description": "A web application where users can make or fill questionnaire from others",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Panji-Utama/survey-app.git"
+  },
+  "keywords": [
+    "survey",
+    "javascript"
+  ],
+  "author": "Firman Panji Utama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Panji-Utama/survey-app/issues"
+  },
+  "homepage": "https://github.com/Panji-Utama/survey-app#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.2",
+    "nodemon": "^3.0.3"
+  }
+}
