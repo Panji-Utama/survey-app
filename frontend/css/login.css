@@ -18,6 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-image: url(https://www.eesurvey.net/wp-content/uploads/2019/03/dreamstime_m_84931842.jpg);
+    backdrop-filter: blur(5px);
 	background-position: center center;
 	background-repeat: no-repeat;
     background-size: cover;
@@ -27,14 +28,20 @@ body {
     width: 200px;
     margin-top: 30px;
     border-radius: 40px;
+    margin-bottom: 20px;
 }
 
 .login-container {
-    backdrop-filter: blur(5px);
-    border: solid 1px rgb(78, 251, 249, 0.2);
+    border: solid 1px rgba(42, 117, 116, 0.781);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.2);
-    padding: 40px;
+    padding: 0 60px;
+    background-color: rgba(72, 101, 134, 0.266);
+}
+
+.login-container p a{
+    font-size: 0.8rem;
+    color: rgb(146, 230, 230);
 }
 
 .login-title {
@@ -42,19 +49,38 @@ body {
     justify-content: center;
     align-items: start;
     color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 input[type="email"], input[type="password"]{
     appearance: none;
     padding: 5px;
     margin: 10px 0;
-    border: solid 1px green;
+    border: solid 1px #6ceffe2d;
     outline: none;
     background-color: transparent;
-    color: red;
+    color: white;
     border-radius: 5px;
+    min-width: 300px;
 }
 
 input[type="submit"] {
     cursor: pointer;
+    appearance: none;
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
