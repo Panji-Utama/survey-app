@@ -31,7 +31,7 @@ const userCollection = db.collection('user');
 //   }
 // });
 
-router.get("/maker/auth", async (req,res) => {
+router.post("/maker/auth", async (req,res) => {
     try {
         const {email, password} = req.body
 

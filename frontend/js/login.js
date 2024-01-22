@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (response.ok) {
                 const userData = await response.json();
-                window.location.href = '/maker_dashboard.html';
+                window.location.href = 'maker_dashboard.html';
             } else {
                 // Handle unsuccessful login (show error message, etc.)
                 console.error('Login failed');
