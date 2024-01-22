@@ -54,7 +54,7 @@ router.post("/maker/auth", async (req,res) => {
     }
 })
 
-router.get("/filler/auth", async (req,res) => {
+router.post("/filler/auth", async (req,res) => {
     try {
         const {email, password} = req.body
 
