@@ -3,3 +3,13 @@ GET http://localhost:3000/user
 ###
 
 GET http://localhost:3000/user/2
+
+###
+
+GET http://localhost:3000/user/maker/auth
+Content-Type: application/json
+
+{
+    "email":"user1@gmail.com",
+    "password":"user1"
+}

@@ -9,33 +9,80 @@ const db = mongoose.connection
 const userCollection = db.collection('user');
 
 // Login
-router.get('/auth/login', async (req, res) => {
-  let email = req.body.email;
-  let password = req.body.password;
-  console.log(email, password)
+// router.get('/auth', async (req, res) => {
+//   let email = req.body.email;
+//   let password = req.body.password;
+//   console.log(email, password)
 
-  if (email && password) {
-      try {
-          const user = await userCollection.findOne({ "email": email, "password": password });
+//   if (email && password) {
+//         try {
+//           const user = await userCollection.findOne({ "email": email, "password": password });
 
-          if (user) {
-              res.json(user);
-          } else {
-              res.status(404).json({ error: 'User not found' });
-          }
-      } catch (error) {
-          res.status(500).json({ error: 'Internal server error' });
-      }
-  } else {
-      res.status(400).send("Error: Please fill in email and password");
-  }
-});
+//           if (user) {
+//               res.json(user);
+//           } else {
+//               res.status(404).json({ error: 'User not found' });
+//           }
+//       } catch (error) {
+//           res.status(500).json({ error: 'Internal server error' });
+//       }
+//   } else {
+//       res.status(400).send("Error: Please fill in email and password");
+//   }
+// });
+
+router.get("/maker/auth", async (req,res) => {
+    try {
+        const {email, password} = req.body
+
+        if (!email) {
+            return res.status(400).json({error: "Please fill in the email!"})
+        } else if (!password){
+            return res.status(400).json({error: "Please fill in your password!"})
+        } else {
+            const user = await userCollection.findOne({ "email": email, "password": password });
+
+            if (!user) {
+                res.status(404).json({error: "User not found!"})
+            } else {
+                const {_id, username, email} = user
+                res.status(200).json({_id, username, email})
+            }
+        }
+    } catch (error) {
+        res.status(500).json({error: 'Internal server error'})
+    }
+})
+
+router.get("/filler/auth", async (req,res) => {
+    try {
+        const {email, password} = req.body
+
+        if (!email) {
+            return res.status(400).json({error: "Please fill in the email!"})
+        } else if (!password){
+            return res.status(400).json({error: "Please fill in your password!"})
+        } else {
+            const user = await userCollection.findOne({ "email": email, "password": password });
+
+            if (!user) {
+                res.status(404).json({error: "User not found!"})
+            } else {
+                const {_id, username, email} = user
+                res.status(200).json({_id, username, email})
+            }
+        }
+    } catch (error) {
+        res.status(500).json({error: 'Internal server error'})
+    }
+})
+
 
 // Get All
 router.get('/', async (req, res) => {
     try {
         // res.send("Hello World")
-        const user = await userCollection.findOne({"user1.username":"User 1"})
+        const user = await userCollection.find()
         res.json(user)
     } catch (error) {
       res.status(500).json({ error: 'Internal server error' });
