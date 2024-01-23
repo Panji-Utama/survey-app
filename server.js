@@ -42,27 +42,3 @@ app.get('/', (req,res) => {
   res.send("Hello")
 })
 
-
-
-// app.get('/auth/login/', async (req, res) => {
-//   let email = req.body.email;
-//   let password = req.body.password;
-//   console.log(email, password)
-
-//   if (email && password) {
-//       try {
-//           const userCollection = db.collection('user');
-//           const user = await userCollection.findOne({ "email": email, "password": password });
-
-//           if (user) {
-//               res.json(user);
-//           } else {
-//               res.status(404).json({ error: 'User not found' });
-//           }
-//       } catch (error) {
-//           res.status(500).json({ error: 'Internal server error' });
-//       }
-//   } else {
-//       res.status(400).send("Error: Please fill in email and password");
-//   }
-// });
