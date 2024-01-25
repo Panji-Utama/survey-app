@@ -1,0 +1,55 @@
+:root {
+    --primary: #17253A;
+    --secondary: #6CEFFE;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#sidebar {
+    height: 100vh;
+    width: 200px;
+    background-color: var(--primary);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#logo {
+    height: 1px;
+    background-color: red;
+}
+
+#sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    #sidebar {
+        width: 100%;
+        padding-top: 40px;
+        text-align: center;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #sidebar a {
+        font-size: 16px;
+    }
+}
