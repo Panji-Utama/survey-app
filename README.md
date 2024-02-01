@@ -2,6 +2,10 @@
 ![Survey App](./product-screenshot.png?raw=true)
 This is a survey application built using HTML, CSS, JavaScript, Node.js, Express, and MongoDB. The application allows two types of users: fillers and makers. Fillers can fill in forms created by makers, while makers can create new surveys for others to fill.
 
+## Project Status
+
+This project is currently **in progress**. Some features may be incomplete or under development.
+
 ## Features
 
 - **User Authentication**: Users can sign up and log in as fillers or makers.
@@ -56,8 +60,4 @@ This is a survey application built using HTML, CSS, JavaScript, Node.js, Express
 
 ## License
 
-This project is licensed under the [MIT License](README).
-
-## Acknowledgments
-
-- [Any acknowledgments or credits you want to include]
+This project is licensed under the [MIT License](LICENSE).
