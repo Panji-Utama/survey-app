@@ -2,17 +2,17 @@
 ![Survey App](./product-screenshot.png?raw=true)
 This is a survey application built using HTML, CSS, JavaScript, Node.js, Express, and MongoDB. The application allows two types of users: fillers and makers. Fillers can fill in forms created by makers, while makers can create new surveys for others to fill.
 
-## Project Status
+## Project Status [✏️]
 
 This project is currently **in progress**. Some features may be incomplete or under development.
 
 ## Features
 
-- **User Authentication**: Users can sign up and log in as fillers or makers.
-- **Survey Creation**: Makers can create surveys with custom questions and options.
-- **Survey Filling**: Fillers can access surveys created by makers and fill them out.
-- **Dashboard Interface**: Both fillers and makers have their own dashboard interfaces for managing surveys and responses.
-- **Responsive Design**: The application is responsive and can be accessed from various devices.
+- [X] **User Authentication**: Users can sign up and log in as fillers or makers.
+- [ ] **Survey Creation**: Makers can create surveys with custom questions and options.
+- [ ] **Survey Filling**: Fillers can access surveys created by makers and fill them out.
+- [X] **Dashboard Interface**: Both fillers and makers have their own dashboard interfaces for managing surveys and responses.
+- [ ] **Responsive Design**: The application is responsive and can be accessed from various devices.
 
 ## Technologies Used
 
