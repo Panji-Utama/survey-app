@@ -29,7 +29,7 @@ router.post("/register", async (req, res) => {
 router.post("/maker/auth", async (req, res) => {
   try {
     const { email, password } = req.body;
-
+    console.log(email + password);
     if (!email) {
       return res.status(400).json({ error: "Please fill in the email!" });
     } else if (!password) {
@@ -37,11 +37,11 @@ router.post("/maker/auth", async (req, res) => {
     } else {
       const user = await userCollection.findOne({
         email: email,
-        password: password,
+        // password: password,
       });
 
       if (!user) {
-        res.status(404).json({ error: "User not found!" });
+        return res.status(404).json({ error: "User not found!" });
       }
 
       const passwordMatch = await bcrypt.compare(password, user.password);
@@ -54,10 +54,10 @@ router.post("/maker/auth", async (req, res) => {
         expiresIn: "1h",
       });
 
-      res.status(200).json({ token });
+      return res.status(200).json({ token });
     }
   } catch (error) {
-    res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: "Internal server error" });
   }
 });
 // ============= Maker Login ================ //
@@ -81,7 +81,6 @@ router.post("/filler/auth", async (req, res) => {
         res.status(404).json({ error: "User not found!" });
       } else {
         const { _id, username, email } = user;
-        // const passwordMatch = await bcrypt.compare(password, user.)
         res.status(200).json({ _id, username, email });
       }
     }
