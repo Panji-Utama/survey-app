@@ -27,3 +27,5 @@ modeSwitch.addEventListener("click" , () =>{
 });
 
 /* ========== Responsive Sidebar End ============ */
+
+console.log(localStorage.getItem("token"))
